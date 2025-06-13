@@ -247,19 +247,7 @@ def download_file(task_id):
     else:
         return jsonify({"error": "Berkas belum siap untuk diunduh atau tugas tidak ditemukan."}), 404
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/help')
-def help_page():
-    return render_template('help.html')
-
 if __name__ == '__main__':
     # Pastikan server berjalan dalam mode non-debug untuk ThreadPoolExecutor agar bekerja lebih baik
     # Jika debug=True, Flask akan me-reload aplikasi dan me-reset ThreadPoolExecutor
-    app.run(debug=False, port=5000, threaded=True) # Aktifkan threaded untuk dukungan ThreadPoolExecutor yang lebih baik
+    app.run(debug=False, port=5000, threaded=True)
