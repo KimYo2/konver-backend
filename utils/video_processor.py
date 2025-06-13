@@ -2,6 +2,10 @@ import ffmpeg
 import os
 import logging
 
+# Atur jalur FFmpeg dan FFprobe secara eksplisit
+ffmpeg.set_ffmpeg_path('/usr/bin/ffmpeg')
+ffmpeg.set_ffprobe_path('/usr/bin/ffprobe')
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class VideoProcessorError(Exception):
