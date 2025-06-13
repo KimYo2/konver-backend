@@ -1,5 +1,5 @@
 # Gunakan base image Python
-FROM python:3.12-slim-buster
+FROM python:3.12-slim
 
 # Set working directory
 WORKDIR /app
